@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+</head>
+<!-- daisy and tailwind -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="shortcut icon" href="https://png.pngtree.com/png-vector/20191030/ourmid/pngtree-currency-exchange-money-icon-design-for-web-png-image_1927649.jpg" type="image/x-icon">
+<body>
+    <section class="w-3/6 h-full mx-auto bg-gray-200 pb-10">
+        <div class="w-full h-60 pt-64 flex flex-col mx-auto justify-center items-center">
+            <img class="mt-32 h-96 w-[65%] relative" src="assets/bg.png" alt="">
+           <img class="h-24  w-28 absolute -mt-8" src="assets/Group.png" alt="">
+        </div>
+
+        <div class="mt-24">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-white py-8 px-4 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-semibold">Mobile Number</span>
+                    </label>
+                    <input id="phone-num" class=" rounded-xl bg-gray-200 py-2 px-4" type="number" placeholder="Enter your phone number"  />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-semibold">4 Digit Pin</span>
+                    </label>
+                    <input id="pin-num" type="password" placeholder="Pin" class=" rounded-xl bg-gray-200 py-2 px-4" />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="login-btn" class="btn btn-primary">Login</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+    </section>
+    <script src="scripts/login.js"></script>
+</body>
+</html>
