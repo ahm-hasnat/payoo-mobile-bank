@@ -8,12 +8,12 @@ document.getElementById("add-money-btn").addEventListener("click",function(event
     const accountNum = document.getElementById("account-num").value;
     const inputAmount = parseInt(document.getElementById("amount").value);
     const money = parseInt(document.getElementById("totalMoney").innerText);
-    const sum = inputAmount + money;
     const pin = parseInt(document.getElementById("pinCode").value);
     const selectedBank = document.getElementById("select-bank").value;
      const banks = ["Bkash","Nogod","Rocket","Islami Bank"];
-    if(accountNum.startsWith("01") && accountNum.length === 11 && banks.includes(selectedBank)){
+    if( inputAmount > 0 && accountNum.startsWith("01") && accountNum.length === 11 && banks.includes(selectedBank)){
        if(pin === 2025){
+        const sum = inputAmount + money;
           document.getElementById("totalMoney").innerText = sum;
           alert(inputAmount + " Taka Added" );
           document.getElementById("form").reset();
@@ -21,6 +21,9 @@ document.getElementById("add-money-btn").addEventListener("click",function(event
        else{
         alert("Murubbi uhuhu Pin thik nai")
        }
+    }
+    else if(inputAmount < 0){
+        alert("Provide Valid Amount")
     }
     else if(!banks.includes(selectedBank)){
         alert("Please select a bank")
