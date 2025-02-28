@@ -17,7 +17,7 @@
             <div class="flex justify-between gap-5">
                 <img class="h-12 w-16" src="assets/Group.png" alt="">
                 <div class="">
-                    <h2 class="text-black text-xl font-semibold">$45000</h2>
+                    <h2 class="text-black text-xl font-semibold">$ <span id="totalMoney">45000</span></h2>
                     <p class="">Available Balance</p>
                 </div>
             </div>
@@ -73,7 +73,7 @@
    <h1 class=" ml-6 text-2xl text-black font-bold mt-8">Add Money</h1>
    <div class="hero mt-8">
       <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <form class="card-body">
+        <form id="form" class="card-body">
           <div class="form-control">
             <label class="label">
               <span class="label-text">Select A Bank</span>
@@ -96,13 +96,13 @@
             <label class="label">
               <span class="label-text">Amount to Add</span>
             </label>
-            <input type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+            <input id="amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
           </div>
           <div class="form-control">
             <label class="label">
               <span class="label-text">Pin Number</span>
             </label>
-            <input type="password" placeholder="Enter 4 digit pin" class="input input-bordered" required />
+            <input id="pinCode" type="password" placeholder="Enter 4 digit pin" class="input input-bordered" required />
           </div>
           <div class="form-control mt-6">
             <button id="add-money-btn" class="btn btn-primary">Add Money</button>
