@@ -16,12 +16,12 @@
         <nav class="flex w-[90%] px-6 justify-between mx-auto">
             <div class="flex justify-between gap-5">
                 <img class="h-12 w-16" src="assets/Group.png" alt="">
-                <div>
+                <div class="">
                     <h2 class="text-black text-xl font-semibold">$45000</h2>
-                    <p>Available Balance</p>
+                    <p class="">Available Balance</p>
                 </div>
             </div>
-            <button class="btn btn-outline"><i class="rotate-180 fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+            <button id="logout-btn" onclick="toLoginPage()" class="btn btn-outline"><i class="rotate-180 fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
         </nav>
         <div class="h-[2px] bg-gray-600 mt-6"><hr></div>
     </header>
@@ -34,31 +34,86 @@
         </div>
         <!-- card con -->
          <div class="grid grid-cols-3 p-3 justify-items-center gap-4 mt-6">
-            <div class="border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px] ">
+            <div id="add-money" class="hover:bg-green-200 flex flex-col items-center border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px] cursor-pointer">
                 <img src="assets/wallet1.png" alt="">
                 <p class="mt-2">Add Money</p>
             </div>
-            <div class="border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px]">
+            <div class="flex flex-col border-[1px] items-center hover:bg-green-200 border-gray-600 rounded-lg p-4 min-w-[142px]">
                 <img src="assets/send1.png" alt="">
                 <p class="mt-2">Cashout</p>
             </div>
-            <div class="border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px]">
+            <div class="flex flex-col border-[1px] border-gray-600 items-center hover:bg-green-200 rounded-lg p-4 min-w-[142px]">
                 <img src="assets/money1.png" alt="">
                 <p class="mt-2">Transfer Money</p>
             </div>
-            <div class="border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px]">
+            <div class="flex flex-col hover:bg-green-200 border-[1px] border-gray-600 rounded-lg items-center p-4 min-w-[142px]">
                 <img src="assets/bonus1.png" alt="">
                 <p class="mt-2">Get Bonus</p>
             </div>
-            <div class="border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px]">
+            <div class="items-center hover:bg-green-200 flex flex-col border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px]">
                 <img src="assets/purse1.png" alt="">
                 <p class="mt-2">Pay Bill</p>
             </div>
-            <div class="border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px]">
+            <div class="flex hover:bg-green-200 flex-col items-center border-[1px] border-gray-600 rounded-lg p-4 min-w-[142px]">
                 <img src="assets/transaction1.png" alt="">
                 <p class="mt-2">Transaction</p>
             </div>
          </div>
+         <!-- money section -->
+         <div id="money" class="flex justify-center flex-col gap-3 items-center mt-10">
+            <h1 class="text-2xl text-black font-bold">Money Dosen't Matter!!</h1>
+         <img class="rounded-md h-64 w-64" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRen6B_ePifhBX026KUVqhN8Me8Sm0Mj9ZBWA&s" alt="">
+
+         <p>Taka Poysa holo mama hater moyla😎</p>
+        </div>
     </section>
+
+    <!-- add money section -->
+<section id="addMoney" class="w-3/6 h-full mx-auto bg-gray-200 py-4 hidden">
+   <h1 class=" ml-6 text-2xl text-black font-bold mt-8">Add Money</h1>
+   <div class="hero mt-8">
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Select A Bank</span>
+            </label>
+            <select id="select-bank" class="select select-bordered w-full max-w-xs">
+                <option disabled selected>Select Bank</option>
+                <option value="Bkash">Bkash</option>
+                <option value="Nogod">Nogod</option>
+                <option value="Rocket">Rocket</option>
+                <option value="Islami Bank">Islami Bank</option>
+              </select>
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Bank Account Number</span>
+            </label>
+            <input id="account-num" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Amount to Add</span>
+            </label>
+            <input type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Pin Number</span>
+            </label>
+            <input type="password" placeholder="Enter 4 digit pin" class="input input-bordered" required />
+          </div>
+          <div class="form-control mt-6">
+            <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="scripts/login.js"></script>
+<script src="scripts/addmoney.js"></script>
 </body>
 </html>

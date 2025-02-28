@@ -13,3 +13,7 @@ document.getElementById("login-btn").addEventListener("click",function(){
         alert("Please provide valid number")
     }
 })
+function toLoginPage(){
+     window.location.href="./index.html"
+     console.log(hello);
+}
